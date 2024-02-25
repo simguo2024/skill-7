@@ -19,7 +19,6 @@ const rollbar = new Rollbar({
   captureUncaught: true,
   captureUnhandledRejections: true,
 });
-console.log(process.env.ROLLBAR_ACCESS_TOKEN)
 
 // Add up the total health of all the robots
 const calculateTotalHealth = (robots) =>
