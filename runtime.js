@@ -1,11 +1,11 @@
 const perf = require('execution-time')();
 
 
-function doublerAppend(nums){
+function doublerAppend(nums) {
 
     let new_nums = [];
 
-    for (let i = 0; i < nums.length; i++){
+    for (let i = 0; i < nums.length; i++) {
         let num = nums[i] * 2;
         new_nums.push(num);
     }
@@ -13,11 +13,11 @@ function doublerAppend(nums){
 }
 
 
-function doublerInsert(nums){
+function doublerInsert(nums) {
 
     let new_nums = [];
 
-    for (let i = 0; i < nums.length; i++){
+    for (let i = 0; i < nums.length; i++) {
         let num = nums[i] * 2;
         new_nums.unshift(num);
     }
@@ -25,9 +25,9 @@ function doublerInsert(nums){
 }
 
 
-function getSizedArray(size){
+function getSizedArray(size) {
     let array = [];
-    for (let i = 0; i < size; i++){
+    for (let i = 0; i < size; i++) {
         array.push(i);
     }
     return array;
@@ -62,3 +62,6 @@ console.log("unshift", resultsInsert.preciseWords);
 console.log("push", resultsAppend.preciseWords);
 
 
+/* The doublerAppend function efficiently scales with the input array size, with a linear time complexity of O(n)
+In contrast, doublerInsert with a time complexity of O(n ^ 2), increasing processing time as the array grows.
+Consequently, doublerAppend is the more scalable function, especially for larger arrays*/
